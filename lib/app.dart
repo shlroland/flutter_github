@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_github/page/login_page.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_github/store/state.dart';
 import 'package:flutter_github/page/welcome_page.dart';
@@ -21,6 +22,9 @@ class _FlutterReduxAppState extends State<FlutterReduxApp> {
       routes: {
         WelcomePage.sName: (context) {
           return WelcomePage();
+        },
+        LoginPage.sName:(context) {
+          return LoginPage();
         }
       },
     );

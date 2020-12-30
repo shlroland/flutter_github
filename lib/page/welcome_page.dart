@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_github/common/utils/navigator_utils.dart';
 
 class WelcomePage extends StatefulWidget {
   WelcomePage({Key key}) : super(key: key);
@@ -10,6 +11,16 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _WelcomePageState extends State<WelcomePage> {
+  @override
+  void didChangeDependencies() {
+    // TODO: implement didChangeDependencies
+    super.didChangeDependencies();
+
+    Future.delayed(const Duration(seconds: 2, microseconds: 500), () {
+      NavigatorUtils.goLogin(context);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Material(
