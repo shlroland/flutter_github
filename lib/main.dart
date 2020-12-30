@@ -1,10 +1,14 @@
 // import 'package:flutter/material.dart';
 import 'dart:convert';
-import 'package:flutter_github/env/mock_data.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_github/env/config_wrapper.dart';
+import 'package:flutter_github/env/dev.dart';
 import 'package:flutter_github/env/env_config.dart';
+import 'package:flutter_github/app.dart';
 
 void main() {
-  // runApp(MyApp());
-  Data data = Data.fromJson(json.decode(JsonString.mockdata));
-  print(data.toJson());
+  runApp(ConfigWrapper(
+    child: FlutterReduxApp(),
+    config: EnvConfig.fromJson(config),
+  ));
 }
